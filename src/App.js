@@ -1,7 +1,5 @@
 import "./App.css";
 import { Route, Routes, NavLink } from "react-router-dom";
-import { Col, Row } from "antd";
-import "antd/dist/reset.css";
 import B1B2 from "./B1B2";
 import B2 from "./B2";
 
