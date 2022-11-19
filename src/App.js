@@ -9,7 +9,7 @@ const App = () => {
       <div className="App">
         <h1 className="title1">Im Berufssprachkurs Audio Materialien</h1>
         <nav className="linkButton">
-          <NavLink className="Link" to="/b1b2">
+          <NavLink className="Link" to="/">
             B1/B2
           </NavLink>
           <NavLink className="Link" to="/b2">
@@ -18,7 +18,7 @@ const App = () => {
         </nav>
 
         <Routes>
-          <Route path="/b1b2" element={<B1B2 />} />
+          <Route path="/" element={<B1B2 />} />
           <Route path="/b2" element={<B2 />} />
         </Routes>
       </div>
