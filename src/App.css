@@ -33,6 +33,14 @@
   display: flex;
   justify-content: center;
 }
+.audioButton {
+  padding: 20px 5rem;
+  border: 1px solid rgb(255, 255, 255);
+}
+.audioButton:hover {
+  cursor: pointer;
+  background-color: aquamarine;
+}
 .b1b2-Container {
   display: flex;
   justify-content: center;

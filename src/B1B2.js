@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Card } from "antd";
 import ReactAudioPlayer from "react-audio-player";
 
@@ -98,17 +98,29 @@ const b1b2Files = [
 ];
 
 const App = () => {
+  const [file, setFile] = useState(b1b2Files[0]);
+
+  const fileHandle = (e) => {
+    // console.log(e.target.value);
+    setFile(b1b2Files[e.target.value]);
+  };
+
   return (
     <>
-      <h2 className="card-title">B1/B2</h2>
+      <div>
+        <h2 className="card-title">B1/B2</h2>
+        <ReactAudioPlayer
+          src={process.env.PUBLIC_URL + `/b1-b2/${file}`}
+          controls
+        />
+      </div>
+
       <Card className="b1b2-Container">
-        {b1b2Files.map((file) => (
-          <div className="audioCard">
-            <label> {file.slice(0, 2)} </label>
-            <ReactAudioPlayer
-              src={process.env.PUBLIC_URL + `/b1-b2/${file}`}
-              controls
-            />
+        {b1b2Files.map((item, index) => (
+          <div key={index} className="audioCard">
+            <button className="audioButton" value={index} onClick={fileHandle}>
+              Audio {item.slice(0, 2)}
+            </button>
           </div>
         ))}
       </Card>

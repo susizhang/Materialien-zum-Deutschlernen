@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import ReactAudioPlayer from "react-audio-player";
+import { useState } from "react";
 
 const b2Files = [
   "001_Im_Berufssprachkurs_B2_KB_L1_A01a.mp3",
@@ -147,17 +148,28 @@ const b2Files = [
 ];
 
 const App = () => {
+  const [file, setFile] = useState(b2Files[0]);
+
+  const fileHandle = (e) => {
+    // console.log(e.target.value);
+    setFile(b2Files[e.target.value]);
+  };
   return (
     <>
-      <h2 className="card-title">B2</h2>
+      <div>
+        <h2 className="card-title">B2</h2>
+        <ReactAudioPlayer
+          src={process.env.PUBLIC_URL + `/b2/${file}`}
+          controls
+        />
+      </div>
+
       <Card className="b1b2-Container">
-        {b2Files.map((file) => (
-          <div className="audioCard">
-            <label> {file.slice(1, 3)} </label>
-            <ReactAudioPlayer
-              src={process.env.PUBLIC_URL + `/b2/${file}`}
-              controls
-            />
+        {b2Files.map((item, index) => (
+          <div key={index} className="audioCard">
+            <button className="audioButton" value={index} onClick={fileHandle}>
+              Audio {item.slice(1, 3)}
+            </button>
           </div>
         ))}
       </Card>
