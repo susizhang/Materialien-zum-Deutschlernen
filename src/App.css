@@ -46,17 +46,24 @@
 .b1b2-Container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .audioCard {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 20px;
+  margin: 10px;
 }
 .playerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: aliceblue;
 }

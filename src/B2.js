@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "antd";
+
 import ReactAudioPlayer from "react-audio-player";
 import { useState } from "react";
 
@@ -158,16 +158,9 @@ const App = () => {
     <>
       <div>
         <h2 className="card-title">B2</h2>
-        <div className="playerContainer">
-          <label>{file.slice(1, 3)}</label>
-          <ReactAudioPlayer
-            src={process.env.PUBLIC_URL + `/b2/${file}`}
-            controls
-          />
-        </div>
       </div>
 
-      <Card className="b1b2-Container">
+      <div className="b1b2-Container">
         {b2Files.map((item, index) => (
           <div key={index} className="audioCard">
             <button className="audioButton" value={index} onClick={fileHandle}>
@@ -175,7 +168,14 @@ const App = () => {
             </button>
           </div>
         ))}
-      </Card>
+      </div>
+      <div className="playerContainer">
+        <label>{file.slice(1, 3)}</label>
+        <ReactAudioPlayer
+          src={process.env.PUBLIC_URL + `/b2/${file}`}
+          controls
+        />
+      </div>
     </>
   );
 };
