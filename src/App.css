@@ -37,6 +37,7 @@
   padding: 20px 5rem;
   border: 1px solid rgb(255, 255, 255);
   font-size: 1.5rem;
+  color: black;
 }
 .audioButton:hover {
   cursor: pointer;
@@ -58,8 +59,4 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
-
-.playerContainer label {
-  color: black;
 }
