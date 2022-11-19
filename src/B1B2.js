@@ -109,10 +109,13 @@ const App = () => {
     <>
       <div>
         <h2 className="card-title">B1/B2</h2>
-        <ReactAudioPlayer
-          src={process.env.PUBLIC_URL + `/b1-b2/${file}`}
-          controls
-        />
+        <div className="playerContainer">
+          <label>{file.slice(0, 2)}</label>
+          <ReactAudioPlayer
+            src={process.env.PUBLIC_URL + `/b1-b2/${file}`}
+            controls
+          />
+        </div>
       </div>
 
       <Card className="b1b2-Container">
