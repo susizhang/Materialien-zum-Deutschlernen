@@ -68,3 +68,8 @@
   padding: 20px;
   background-color: rgb(17, 26, 33);
 }
+
+.playerContainer label {
+  color: aliceblue;
+  font-size: 1.5rem;
+}
