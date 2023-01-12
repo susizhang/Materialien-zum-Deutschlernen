@@ -20,7 +20,7 @@ const App = () => {
         {b2Files.map((item, index) => (
           <div key={index} className="audioCard">
             <button className="audioButton" value={index} onClick={fileHandle}>
-              Audio {item.slice(1, 3)}
+              Audio {item.slice(0, 3)}
             </button>
           </div>
         ))}

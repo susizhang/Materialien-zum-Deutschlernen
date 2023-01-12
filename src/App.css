@@ -66,7 +66,7 @@
   right: 0;
   bottom: 0;
   padding: 20px;
-  background-color: rgb(40, 50, 58);
+  background-color: rgb(36, 45, 54);
 }
 
 .playerContainer label {
@@ -76,5 +76,5 @@
 
 .react-audio-player {
   background-color: rgb(255, 255, 255);
-  border-radius: 30px;
+  border-radius: 50px;
 }
