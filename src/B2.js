@@ -26,7 +26,7 @@ const App = () => {
         ))}
       </div>
       <div className="playerContainer">
-        <label>{file.slice(1, 3)}</label>
+        <label>{file.slice(0, 3)}</label>
         <ReactAudioPlayer
           src={process.env.PUBLIC_URL + `/b2/${file}`}
           controls
